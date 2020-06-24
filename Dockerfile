@@ -6,6 +6,6 @@ RUN mkdir -p /var/run/sshd
 ADD sshd_config /etc/ssh/sshd_config
 
 RUN echo 'root:demo' | chpasswd
-CMD /usr/sbin/sshd -D 
+ENTRYPOINT /usr/sbin/sshd 
 EXPOSE 2222/tcp
 
